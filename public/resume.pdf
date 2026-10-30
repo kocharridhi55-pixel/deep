@@ -1,0 +1,131 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 2787 >>
+stream
+BT
+/F1 22 Tf
+50 740 Td
+(DEVELOPER | DATA SCIENCE STUDENT) Tj
+/F2 10 Tf
+0 -18 Td
+(Portfolio: luxury-portfolio.dev  |  Email: contact@developer.portfolio  |  GitHub: github.com/portfolio-dev) Tj
+ET
+q
+0.5 0.5 0.5 RG
+0.75 w
+50 710 m 562 710 l S
+Q
+BT
+/F1 12 Tf
+50 690 Td
+(PROFESSIONAL SUMMARY) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Results-driven Developer and Data Science Student with deep expertise across modern web architectures,) Tj
+0 -13 Td
+(interactive visualization, and machine learning pipelines. Passionate about crafting high-performance,) Tj
+0 -13 Td
+(cinematic digital experiences and building data-driven systems that deliver measurable impact.) Tj
+/F1 12 Tf
+0 -24 Td
+(EDUCATION & PROFESSIONAL CERTIFICATIONS) Tj
+/F1 10 Tf
+0 -16 Td
+(Bachelor of Science in Information Technology / Computer Science) Tj
+/F3 9 Tf
+0 -12 Td
+(Academic Excellence  |  Focus on Data Structures, Algorithms & Database Systems) Tj
+/F1 10 Tf
+0 -16 Td
+(Post Graduate Diploma in Computer Applications (PGDCA)) Tj
+/F3 9 Tf
+0 -12 Td
+(Advanced Computer Applications, Systems Programming, Database Architecture) Tj
+/F1 10 Tf
+0 -16 Td
+(Applied Artificial Intelligence & Machine Learning Specialization) Tj
+/F3 9 Tf
+0 -12 Td
+(Neural Networks, Deep Learning Architectures, Prompt Engineering & Model Fine-Tuning) Tj
+/F1 12 Tf
+0 -24 Td
+(TECHNICAL EXPERTISE) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Languages: Python, JavaScript, TypeScript, SQL, HTML5, CSS3) Tj
+0 -14 Td
+(Frontend: React, Next.js, Tailwind CSS, Motion, WebGL / Canvas) Tj
+0 -14 Td
+(Data Science & AI: Pandas, NumPy, Matplotlib, Scikit-Learn, Gemini AI API, Data Visualization) Tj
+0 -14 Td
+(Tools & Platforms: Git, GitHub, VS Code, Express, Vite, REST APIs, Linux/Bash) Tj
+/F1 12 Tf
+0 -24 Td
+(KEY PROJECTS & ENGINEERING WORKS) Tj
+/F1 10 Tf
+0 -16 Td
+(1. Custom AI Chatbot Platform) Tj
+/F2 9 Tf
+0 -12 Td
+(- Engineered an intelligent conversational system powered by Gemini AI API with streaming responses.) Tj
+0 -11 Td
+(- Built custom persona management, context caching, and luxury dark editorial interface.) Tj
+/F1 10 Tf
+0 -15 Td
+(2. Medical Shop Inventory Management System) Tj
+/F2 9 Tf
+0 -12 Td
+(- Real-time pharmaceutical stock tracking, batch expiry notifications, and fast invoice lookup.) Tj
+0 -11 Td
+(- Implemented analytics on SKU turnover, reorder alerts, and sales margin reporting.) Tj
+/F1 10 Tf
+0 -15 Td
+(3. Data Analysis & Interactive Visualization Suite) Tj
+/F2 9 Tf
+0 -12 Td
+(- Developed dynamic data exploration dashboards with Pandas, NumPy, and Matplotlib algorithms.) Tj
+0 -11 Td
+(- Visualized multi-dimensional feature correlations, statistical distributions, and trends.) Tj
+/F1 10 Tf
+0 -15 Td
+(4. High-End E-Commerce Platform) Tj
+/F2 9 Tf
+0 -12 Td
+(- Minimalist luxury storefront with lightning-fast catalog search, dynamic cart, and checkout flow.) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000271 00000 n 
+0000000346 00000 n 
+0000000416 00000 n 
+0000000494 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3333
+%%EOF
