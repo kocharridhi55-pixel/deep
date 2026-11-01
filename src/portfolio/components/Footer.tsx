@@ -7,15 +7,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#e5e3dc] dark:border-[#1d1b26] py-14 bg-[#f8f7f2] dark:bg-[#0c0c0f] font-body">
+    <footer className="border-t border-[#e5e3dc] dark:border-[#1d1b26] py-10 md:py-12 bg-[#f8f7f2] dark:bg-[#0c0c0f] font-body">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Column: Brand & Tagline */}
         <div className="space-y-1 text-center md:text-left">
           <span className="font-editorial text-xl font-medium tracking-tight text-[#141318] dark:text-[#f4f3ef]">
-            KOCHAR <span className="italic font-light text-[#7358a8] dark:text-[#a895d3]">/ EDITORIAL</span>
+            RYTHM KOCHAR <span className="italic font-light text-[#7358a8] dark:text-[#a895d3]">/ DIGITAL PROJECTS</span>
           </span>
           <p className="text-xs text-[#6e6b79] dark:text-[#8e8a9c] font-tabular">
-            Developer · Data Science Student · 2026 Portfolio
+            Web Developer · Digital Projects · Ludhiana, Punjab
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function Footer() {
           <a href="#skills" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Skills</a>
           <a href="#projects" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Projects</a>
           <a href="#experience" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Experience</a>
-          <a href="#resume" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Resume</a>
+          <a href="/Rythm_Kochar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Resume</a>
           <a href="#contact" className="hover:text-[#141318] dark:hover:text-[#f4f3ef] transition-colors">Contact</a>
         </div>
 

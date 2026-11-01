@@ -5,7 +5,6 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
-import ResumeSection from './components/ResumeSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -104,10 +103,10 @@ export default function App() {
   };
 
   const handleDownloadResume = () => {
-    // Functional trigger: download real PDF via /api/resume/download or /resume.pdf
+    // Download the original resume PDF from the public folder.
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Developer_DataScience_Resume.pdf';
+    link.href = '/Rythm_Kochar_Resume.pdf';
+    link.download = 'Rythm_Kochar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -141,11 +140,7 @@ export default function App() {
         <Hero onDownloadResume={handleDownloadResume} ready={!isLoading} />
 
         {/* Section 2: About (with AI & PGDCA courses) */}
-        <About onOpenResume={() => {
-          const el = document.getElementById('resume');
-          const lenis = (window as any).__lenis;
-          if (el && lenis) lenis.scrollTo(el, { offset: -72 }); else el?.scrollIntoView({ behavior: 'smooth' });
-        }} />
+        <About />
 
         {/* Section 3: Skills */}
         <Skills />
@@ -159,10 +154,7 @@ export default function App() {
         {/* Section 5: Trajectory & Timeline */}
         <Timeline />
 
-        {/* Section 6: Resume & Credentials */}
-        <ResumeSection onDownloadResume={handleDownloadResume} />
-
-        {/* Section 7: Contact Form */}
+        {/* Section 6: Contact Form */}
         <Contact />
       </main>
 

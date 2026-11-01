@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  category: 'AI & Machine Learning' | 'Web Systems' | 'Data Science' | 'E-Commerce' | 'Portfolio';
+  category: 'AI & Machine Learning' | 'Web Systems' | 'Data Science' | 'E-Commerce' | 'Portfolio' | 'Web Development';
   description: string;
   longDescription: string;
   technologies: string[];
@@ -11,7 +11,7 @@ export interface Project {
   githubUrl: string;
   liveUrl: string;
   features: string[];
-  demoType: 'ai-chat' | 'medical-inventory' | 'portfolio' | 'data-science' | 'ecommerce';
+  demoType: 'ai-chat' | 'medical-inventory' | 'portfolio' | 'data-science' | 'ecommerce' | 'contact-session';
 }
 
 export interface SkillItem {
@@ -24,7 +24,7 @@ export interface SkillItem {
 
 export interface TimelineItem {
   id: string;
-  period: string;
+  period?: string;
   title: string;
   institution: string;
   type: 'education' | 'course' | 'experience' | 'certification';

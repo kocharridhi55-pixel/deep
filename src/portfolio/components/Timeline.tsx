@@ -1,69 +1,35 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { GraduationCap, Briefcase, Award, BookOpen, Check } from 'lucide-react';
+import { GraduationCap, Briefcase, Award, Check } from 'lucide-react';
 import { TIMELINE_DATA } from '../data/portfolioData';
 
 export default function Timeline() {
-  const [filterType, setFilterType] = useState<'all' | 'education' | 'experience'>('all');
-
-  const filteredItems = TIMELINE_DATA.filter((item) => {
-    if (filterType === 'all') return true;
-    if (filterType === 'education') return item.type === 'education' || item.type === 'course';
-    if (filterType === 'experience') return item.type === 'experience';
-    return true;
-  });
+  const filteredItems = TIMELINE_DATA;
 
   return (
-    <section id="experience" className="py-24 md:py-32 relative border-t border-[#e8e6df] dark:border-[#1d1b26]">
+    <section id="experience" className="py-16 md:py-20 relative border-t border-[#e8e6df] dark:border-[#1d1b26]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-[#e5e3dc] dark:border-[#201e2b]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-10 pb-5 md:mb-12 md:pb-6 border-b border-[#e5e3dc] dark:border-[#201e2b]">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.25em] text-[#7358a8] dark:text-[#a895d3] font-semibold">
-              Trajectory & Pedagogy · 04
+              Trajectory &amp; Foundation · 04
             </span>
             <h2 className="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-[#141318] dark:text-[#f4f3ef] tracking-tight">
-              Education & Experience
+              Education &amp; Experience
             </h2>
           </div>
-
-          {/* Filter tabs */}
-          <div className="flex items-center gap-1.5 p-1 bg-[#eae7df] dark:bg-[#16141e] rounded-lg">
-            <button
-              onClick={() => setFilterType('all')}
-              className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-all ${
-                filterType === 'all'
-                  ? 'bg-white dark:bg-[#252233] text-[#141318] dark:text-[#f4f3ef] shadow-sm'
-                  : 'text-[#646170] dark:text-[#8e8a9a] hover:text-[#141318] dark:hover:text-[#f4f3ef]'
-              }`}
-            >
-              All Milestones
-            </button>
-            <button
-              onClick={() => setFilterType('education')}
-              className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-all ${
-                filterType === 'education'
-                  ? 'bg-white dark:bg-[#252233] text-[#141318] dark:text-[#f4f3ef] shadow-sm'
-                  : 'text-[#646170] dark:text-[#8e8a9a] hover:text-[#141318] dark:hover:text-[#f4f3ef]'
-              }`}
-            >
-              Education & Courses
-            </button>
-            <button
-              onClick={() => setFilterType('experience')}
-              className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-all ${
-                filterType === 'experience'
-                  ? 'bg-white dark:bg-[#252233] text-[#141318] dark:text-[#f4f3ef] shadow-sm'
-                  : 'text-[#646170] dark:text-[#8e8a9a] hover:text-[#141318] dark:hover:text-[#f4f3ef]'
-              }`}
-            >
-              Experience
-            </button>
-          </div>
+          <p className="text-xs md:text-sm text-[#666270] dark:text-[#8d8898] max-w-md font-body">
+            Academic credentials, computer application specialization, and technical coursework.
+          </p>
         </div>
 
         {/* Minimal Vertical Timeline */}
-        <div className="relative border-l border-[#dcdad3] dark:border-[#262433] ml-4 md:ml-32 space-y-12">
+        {filteredItems.length === 0 ? (
+          <div className="py-16 text-center text-xs font-tabular tracking-wider uppercase text-[#716e7e] dark:text-[#8d889c]">
+            No experience records to display
+          </div>
+        ) : (
+          <div className="relative border-l border-[#dcdad3] dark:border-[#262433] ml-4 md:ml-32 space-y-8 md:space-y-10">
           {filteredItems.map((item, index) => {
             const isCourse = item.type === 'course';
             const isEducation = item.type === 'education';
@@ -89,16 +55,20 @@ export default function Timeline() {
                 </div>
 
                 {/* Period label for desktop (offset left) */}
-                <div className="hidden md:block absolute -left-32 top-2 w-24 text-right text-xs text-[#716e7e] dark:text-[#8d889c] font-tabular">
-                  {item.period}
-                </div>
+                {item.period ? (
+                  <div className="hidden md:block absolute -left-32 top-2 w-24 text-right text-xs text-[#716e7e] dark:text-[#8d889c] font-tabular">
+                    {item.period}
+                  </div>
+                ) : null}
 
                 {/* Card Container */}
                 <div className="p-6 rounded-xl border border-[#dedcd4] dark:border-[#22202e] bg-[#f8f7f2] dark:bg-[#111017] hover:border-[#17161b]/30 dark:hover:border-[#a895d3]/40 transition-all shadow-sm">
                   {/* Period for mobile */}
-                  <span className="md:hidden block text-xs text-[#716e7e] dark:text-[#8d889c] font-tabular mb-1">
-                    {item.period}
-                  </span>
+                  {item.period ? (
+                    <span className="md:hidden block text-xs text-[#716e7e] dark:text-[#8d889c] font-tabular mb-1">
+                      {item.period}
+                    </span>
+                  ) : null}
 
                   {/* Title & Institution */}
                   <div className="mb-3">
@@ -111,25 +81,34 @@ export default function Timeline() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-[#504d5b] dark:text-[#9e9aa8] leading-relaxed mb-4">
-                    {item.description}
-                  </p>
+                  {item.description ? (
+                    <p
+                      className={`text-xs sm:text-sm text-[#504d5b] dark:text-[#9e9aa8] leading-relaxed ${
+                        item.highlights && item.highlights.length > 0 ? 'mb-4' : ''
+                      }`}
+                    >
+                      {item.description}
+                    </p>
+                  ) : null}
 
                   {/* Highlights Bullet List */}
-                  <div className="space-y-1.5 pt-2 border-t border-[#e8e6df] dark:border-[#1f1d2a]">
-                    {item.highlights.map((highlight, hIdx) => (
-                      <div key={hIdx} className="flex items-start gap-2 text-xs text-[#5f5b6b] dark:text-[#918c9e]">
-                        <Check className="w-3 h-3 text-[#7358a8] dark:text-[#a895d3] shrink-0 mt-0.5" />
-                        <span>{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {item.highlights && item.highlights.length > 0 ? (
+                    <div className="space-y-1.5 pt-2 border-t border-[#e8e6df] dark:border-[#1f1d2a]">
+                      {item.highlights.map((highlight, hIdx) => (
+                        <div key={hIdx} className="flex items-start gap-2 text-xs text-[#5f5b6b] dark:text-[#918c9e]">
+                          <Check className="w-3 h-3 text-[#7358a8] dark:text-[#a895d3] shrink-0 mt-0.5" />
+                          <span>{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </motion.div>
             );
           })}
         </div>
-      </div>
-    </section>
-  );
+      )}
+    </div>
+  </section>
+);
 }

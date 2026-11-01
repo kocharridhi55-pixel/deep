@@ -10,13 +10,13 @@ interface ProjectsProps {
 
 export default function Projects({ onSelectProject, onViewSource }: ProjectsProps) {
   return (
-    <section id="projects" className="py-24 md:py-32 relative border-t border-[#e8e6df] dark:border-[#1d1b26]">
+    <section id="projects" className="py-16 md:py-20 relative border-t border-[#e8e6df] dark:border-[#1d1b26]">
       {/* Subtle ambient lighting */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#856cae]/5 dark:bg-[#7859a8]/8 blur-[130px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20 pb-6 border-b border-[#e5e3dc] dark:border-[#201e2b]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-10 pb-5 md:mb-12 md:pb-6 border-b border-[#e5e3dc] dark:border-[#201e2b]">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.25em] text-[#7358a8] dark:text-[#a895d3] font-semibold">
               Selected Works · 03
@@ -31,7 +31,7 @@ export default function Projects({ onSelectProject, onViewSource }: ProjectsProp
         </div>
 
         {/* Projects List with Alternating Editorial Layout */}
-        <div className="space-y-24 md:space-y-36">
+        <div className="space-y-14 md:space-y-20">
           {PROJECTS_DATA.map((project, index) => {
             const isReversed = index % 2 === 1;
 
@@ -42,7 +42,7 @@ export default function Projects({ onSelectProject, onViewSource }: ProjectsProp
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
                   isReversed ? 'lg:grid-flow-dense' : ''
                 }`}
               >
@@ -77,7 +77,7 @@ export default function Projects({ onSelectProject, onViewSource }: ProjectsProp
 
                       {/* Project Index Watermark / Tag */}
                       <div className="absolute top-4 left-4 text-xs font-tabular tracking-wider uppercase text-white/80 bg-black/50 backdrop-blur-md px-3 py-1 rounded-md border border-white/10">
-                        {String(index + 1).padStart(2, '0')} / 05
+                        {String(index + 1).padStart(2, '0')} / {String(PROJECTS_DATA.length).padStart(2, '0')}
                       </div>
                     </div>
 

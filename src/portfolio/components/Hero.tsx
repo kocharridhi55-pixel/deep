@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
-import { ArrowDown, Download, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ExternalLink, Download } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 const CUBE_IMAGE = '/images/hero-ai-crystal-cube.png';
@@ -16,7 +16,7 @@ const CUBE_PARTICLES = [
 ];
 
 interface HeroProps {
-  onDownloadResume: () => void;
+  onDownloadResume?: () => void;
   ready?: boolean;
 }
 
@@ -68,16 +68,12 @@ function TypewriterTitle({ text }: { text: string }) {
   }
 
   return (
-    <>
-      <span className="sr-only">{text}</span>
-      <span
-        aria-hidden="true"
-        className={`transition-opacity ${fading ? 'opacity-0 duration-500 ease-out' : 'opacity-100 duration-300'}`}
-      >
-        {text.slice(0, typed)}
-        <span className="type-cursor" aria-hidden="true" />
-      </span>
-    </>
+    <span
+      className={`transition-opacity ${fading ? 'opacity-0 duration-500 ease-out' : 'opacity-100 duration-300'}`}
+    >
+      {text.slice(0, typed)}
+      <span className="type-cursor" aria-hidden="true" />
+    </span>
   );
 }
 
@@ -92,9 +88,8 @@ function BounceWords({ text, play, startIndex }: { text: string; play: boolean; 
   if (reducedMotion) return <>{text}</>;
   return (
     <>
-      <span className="sr-only">{text}</span>
       {words.map((word, i) => (
-        <span key={i} aria-hidden="true">
+        <span key={i} className="inline-block">
           <motion.span
             className="inline-block will-change-transform"
             initial={{ opacity: 0, y: '0.55em', filter: 'blur(8px)' }}
@@ -157,33 +152,33 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 flex flex-col justify-between overflow-hidden"
+      className="relative pt-24 md:pt-28 pb-8 md:pb-12 flex flex-col justify-center overflow-hidden"
     >
       {/* Subtle ambient light gradient */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] bg-[#8973b5]/10 dark:bg-[#725a9f]/12 blur-[140px] pointer-events-none rounded-full cinema-ambient" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Typographic Editorial Focus */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Title / Name kicker */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: [0.34, 1.35, 0.64, 1] }}
-              className="space-y-2"
+              className="space-y-1.5"
             >
               <span className="text-xs tracking-[0.25em] uppercase text-[#7358a8] dark:text-[#a895d3] font-semibold">
                 <TypewriterTitle text={PERSONAL_INFO.title} />
               </span>
-              <p className="text-sm font-light text-[#5e5b69] dark:text-[#a39fad] tracking-wide">
-                Bridging machine learning pipelines with cinematic web architecture
+              <p className="text-xs sm:text-sm font-light text-[#5e5b69] dark:text-[#a39fad] tracking-wide">
+                Transforming ideas into practical digital solutions with modern web &amp; AI architectures
               </p>
             </motion.div>
 
             {/* Main Headline */}
             <h1
-              className="font-editorial text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.08] tracking-tight font-normal text-[#141318] dark:text-[#f7f6f2]"
+              className="font-editorial text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] leading-[1.12] tracking-tight font-normal text-[#141318] dark:text-[#f7f6f2]"
               style={{ textWrap: 'balance' }}
             >
               <BounceWords text="Designing Ideas." play={ready} startIndex={0} />{' '}
@@ -197,38 +192,57 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.75, ease: [0.34, 1.35, 0.64, 1] }}
-              className="text-base sm:text-lg text-[#524f5c] dark:text-[#9e9aa8] max-w-xl font-body leading-relaxed"
+              className="text-sm sm:text-base text-[#524f5c] dark:text-[#9e9aa8] max-w-xl font-body leading-relaxed"
             >
-              Hi, I&apos;m a developer and data science student specializing in Python, modern web
-              development with React and Next.js, exploratory data analysis, and applied artificial
-              intelligence. I construct elegant digital systems where mathematical models meet
-              uncompromising visual craft.
+              Developer and Data Science Student with knowledge of modern web development, data analysis,
+              and artificial intelligence. Skilled in building responsive web applications using React,
+              Next.js, and Tailwind CSS, working with data using Python, Pandas, and NumPy, and exploring AI
+              chatbot development and Generative AI workflows.
             </motion.p>
 
-            {/* Two Action Buttons */}
+            {/* Action Buttons: Explore My Projects + View Resume + Download Resume */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.9, ease: [0.34, 1.35, 0.64, 1] }}
-              className="flex flex-wrap items-center gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1"
             >
-              {/* Primary: Explore My Work */}
+              {/* 1. Explore My Projects */}
               <a
                 href="#projects"
-                className="group relative inline-flex items-center gap-2 px-6 py-3.5 text-xs font-semibold uppercase tracking-widest text-white bg-[#17161b] dark:bg-[#f4f3ef] dark:text-[#0f0e12] rounded-md hover:bg-[#2c2936] dark:hover:bg-[#dfdcd3] transition-all shadow-sm"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById('projects');
+                  const lenis = (window as any).__lenis;
+                  if (el && lenis) lenis.scrollTo(el, { offset: -72 });
+                  else el?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-semibold uppercase tracking-widest text-white bg-[#17161b] dark:bg-[#f4f3ef] dark:text-[#0f0e12] rounded-md hover:bg-[#2c2936] dark:hover:bg-[#dfdcd3] transition-all shadow-sm cursor-pointer whitespace-nowrap"
               >
-                <span>Explore My Work</span>
+                <span>Explore My Projects</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
 
-              {/* Secondary: Download Resume */}
-              <button
-                onClick={onDownloadResume}
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#17161b] dark:text-[#f4f3ef] border border-[#d6d3ca] dark:border-[#2d2b38] rounded-md hover:border-[#17161b] dark:hover:border-[#9e9aa8] hover:bg-[#f2efe8] dark:hover:bg-[#16151c] transition-all"
+              {/* 2. View Resume */}
+              <a
+                href="/Rythm_Kochar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#17161b] dark:text-[#f4f3ef] border border-[#d6d3ca] dark:border-[#2d2b38] rounded-md hover:border-[#17161b] dark:hover:border-[#9e9aa8] hover:bg-[#f2efe8] dark:hover:bg-[#16151c] transition-all cursor-pointer whitespace-nowrap"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-[#7358a8] dark:text-[#a895d3]" />
+                <span>View Resume</span>
+              </a>
+
+              {/* 3. Download Resume */}
+              <a
+                href="/Rythm_Kochar_Resume.pdf"
+                download="Rythm_Kochar_Resume.pdf"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#17161b] dark:text-[#f4f3ef] border border-[#d6d3ca] dark:border-[#2d2b38] rounded-md hover:border-[#7358a8] dark:hover:border-[#a895d3] hover:bg-[#f2efe8] dark:hover:bg-[#16151c] transition-all cursor-pointer whitespace-nowrap"
               >
                 <Download className="w-3.5 h-3.5 text-[#7358a8] dark:text-[#a895d3]" />
                 <span>Download Resume</span>
-              </button>
+              </a>
             </motion.div>
 
             {/* Quick credibility line */}
@@ -238,11 +252,11 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
               transition={{ duration: 1, delay: 1.05 }}
               className="flex items-center gap-3 pt-4 text-xs text-[#716e7a] dark:text-[#7f7a8c] font-tabular"
             >
-              <span>18+ Projects</span>
+              <span>Personal Portfolio</span>
               <span aria-hidden="true">·</span>
-              <span>AI Course & PGDCA</span>
+              <span>AI Specialization &amp; PGDCA</span>
               <span aria-hidden="true">·</span>
-              <span>Available for 2026 Opportunities</span>
+              <span>Ludhiana, Punjab</span>
             </motion.div>
           </div>
 
@@ -259,7 +273,7 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
                 perspective: 1000,
                 transformStyle: 'preserve-3d',
               }}
-              className="relative w-full max-w-[420px] group cursor-pointer"
+              className="relative w-full max-w-[360px] sm:max-w-[390px] group cursor-pointer"
             >
               {/* Main Card with smooth 3D tilt */}
               <motion.div
@@ -284,7 +298,7 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
                     animate={ready ? { scale: 1, opacity: 1, filter: 'blur(0px)' } : {}}
                     transition={{ duration: 2.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <motion.div className="w-full h-full" style={reducedMotion ? undefined : { scale: scrollScale, y: scrollY }}>
+                    <motion.div className="w-full h-full" style={reducedMotion ? {} : { scale: scrollScale, y: scrollY }}>
                       <div className="w-full h-full cube-float">
                         {cubeImageFailed ? (
                           <div
@@ -376,7 +390,7 @@ export default function Hero({ onDownloadResume, ready = true }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={ready ? { opacity: 1 } : {}}
         transition={{ delay: 1.4, duration: 0.8 }}
-        className="w-full flex justify-center pt-8"
+        className="w-full flex justify-center pt-6"
       >
         <a
           href="#about"

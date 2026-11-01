@@ -4,9 +4,9 @@ import { lazy, Suspense, useEffect, useState } from "react";
 // The portfolio reads browser storage (theme, session) on first render, so it renders after hydration.
 const PortfolioApp = lazy(() => import("@/portfolio/App"));
 
-const TITLE = "Cinematic Luxury Portfolio | Developer & Data Science Student";
+const TITLE = "RYTHM KOCHAR | Web Developer | Digital Projects";
 const DESC =
-  "A minimal, mysterious, cinematic and luxury editorial portfolio website for a Developer and Data Science Student, featuring slow-motion animations, projects showcase, interactive resume, and contact flow.";
+  "Developer and Data Science Student with knowledge of modern web development, data analysis, and artificial intelligence. Portfolio of Rythm Kochar.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

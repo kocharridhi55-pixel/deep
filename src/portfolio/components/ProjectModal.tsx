@@ -60,6 +60,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.demoType === 'data-science' && <DataScienceDemo />}
             {project.demoType === 'ecommerce' && <EcommerceDemo />}
             {project.demoType === 'portfolio' && <PortfolioArchitectureDemo />}
+            {project.demoType === 'contact-session' && <ContactSessionDemo />}
           </div>
 
           {/* Key Architectural Features */}
@@ -502,3 +503,110 @@ function PortfolioArchitectureDemo() {
     </div>
   );
 }
+
+// 6. Website Contact Session Demo
+function ContactSessionDemo() {
+  const [demoName, setDemoName] = useState('');
+  const [demoEmail, setDemoEmail] = useState('');
+  const [demoPhone, setDemoPhone] = useState('');
+  const [demoMessage, setDemoMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (demoName && demoEmail && demoMessage) {
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="pb-3 border-b border-[#e5e3dc] dark:border-[#201e2e] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h4 className="font-editorial text-lg text-[#141318] dark:text-[#f4f3ef] font-medium">
+            Contact Flow &amp; Usability Sandbox
+          </h4>
+          <p className="text-xs text-[#6e6b79] dark:text-[#8e8a9c]">
+            Interactive demonstration of the planned 4-field visitor communication interface.
+          </p>
+        </div>
+        <div className="text-xs text-[#7358a8] dark:text-[#a895d3] font-tabular">
+          Ludhiana, Punjab · kocharridhi55@gmail.com
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+        <div className="space-y-1">
+          <label className="text-[11px] uppercase tracking-wider text-[#635f70] dark:text-[#908b9e]">
+            Name *
+          </label>
+          <input
+            type="text"
+            required
+            placeholder="Your name"
+            value={demoName}
+            onChange={(e) => setDemoName(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-[#d6d3ca] dark:border-[#292738] bg-white dark:bg-[#14131d] text-[#141318] dark:text-[#f4f3ef] focus:outline-none focus:border-[#7358a8]"
+          />
+        </div>
+
+        <div className="space-y-1">
+          <label className="text-[11px] uppercase tracking-wider text-[#635f70] dark:text-[#908b9e]">
+            Email *
+          </label>
+          <input
+            type="email"
+            required
+            placeholder="your.email@example.com"
+            value={demoEmail}
+            onChange={(e) => setDemoEmail(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-[#d6d3ca] dark:border-[#292738] bg-white dark:bg-[#14131d] text-[#141318] dark:text-[#f4f3ef] focus:outline-none focus:border-[#7358a8]"
+          />
+        </div>
+
+        <div className="space-y-1 sm:col-span-2">
+          <label className="text-[11px] uppercase tracking-wider text-[#635f70] dark:text-[#908b9e]">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            placeholder="+91 Phone number"
+            value={demoPhone}
+            onChange={(e) => setDemoPhone(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-[#d6d3ca] dark:border-[#292738] bg-white dark:bg-[#14131d] text-[#141318] dark:text-[#f4f3ef] focus:outline-none focus:border-[#7358a8]"
+          />
+        </div>
+
+        <div className="space-y-1 sm:col-span-2">
+          <label className="text-[11px] uppercase tracking-wider text-[#635f70] dark:text-[#908b9e]">
+            Message *
+          </label>
+          <textarea
+            rows={3}
+            required
+            placeholder="Type a test inquiry..."
+            value={demoMessage}
+            onChange={(e) => setDemoMessage(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-[#d6d3ca] dark:border-[#292738] bg-white dark:bg-[#14131d] text-[#141318] dark:text-[#f4f3ef] focus:outline-none focus:border-[#7358a8] resize-none"
+          />
+        </div>
+
+        <div className="sm:col-span-2 flex items-center justify-between gap-4 pt-1">
+          <button
+            type="submit"
+            className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#17161b] dark:bg-[#f4f3ef] dark:text-[#0f0e12] rounded-md hover:bg-[#2c2936] transition-all cursor-pointer"
+          >
+            Test Submission Flow
+          </button>
+          {submitted && (
+            <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+              ✓ Message payload simulated successfully!
+            </span>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+}
+

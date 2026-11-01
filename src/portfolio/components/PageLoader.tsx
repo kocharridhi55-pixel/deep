@@ -59,7 +59,7 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-xs md:text-sm tracking-widest uppercase text-[#9e96b8] font-body"
             >
-              Developer · Data Science Student
+              Web Developer · Digital Projects
             </motion.p>
           </div>
 

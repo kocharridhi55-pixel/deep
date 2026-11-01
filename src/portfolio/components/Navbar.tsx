@@ -34,7 +34,7 @@ export default function Navbar({
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Resume', href: '#resume' },
+    { label: 'Resume', href: '/Rythm_Kochar_Resume.pdf', external: true },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -43,25 +43,27 @@ export default function Navbar({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#fcfbf7]/90 dark:bg-[#0b0b0d]/90 backdrop-blur-md border-b border-[#e5e4de] dark:border-[#222227] py-3.5 shadow-sm'
-            : 'bg-transparent py-5'
+            ? 'bg-[#fcfbf7]/90 dark:bg-[#0b0b0d]/90 backdrop-blur-md border-b border-[#e5e4de] dark:border-[#222227] py-3 shadow-sm'
+            : 'bg-[#fcfbf7]/60 dark:bg-[#0b0b0d]/60 backdrop-blur-sm border-b border-transparent py-3.5 sm:py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between gap-4 md:gap-8">
           {/* Zone 1: Brand Wordmark (Single text element) */}
           <a
             href="#home"
             className="font-editorial text-xl md:text-2xl font-medium tracking-tight text-[#17161a] dark:text-[#f4f3ef] whitespace-nowrap shrink-0"
           >
-            <span className="brand-glow" data-text="RIDHI KOCHAR">RIDHI KOCHAR</span>
+            <span className="brand-glow" data-text="RYTHM KOCHAR">RYTHM KOCHAR</span>
           </a>
 
           {/* Zone 2: Navigation Links (Clean single-line text links) */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-medium tracking-wider uppercase text-[#5a5763] dark:text-[#9e9aa8]">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-[11px] xl:text-xs font-medium tracking-wider uppercase text-[#5a5763] dark:text-[#9e9aa8]">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
                 className="hover:text-[#17161a] dark:hover:text-[#f4f3ef] transition-colors whitespace-nowrap shrink-0"
               >
                 {link.label}
@@ -123,6 +125,8 @@ export default function Navbar({
                 <a
                   key={link.label}
                   href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noopener noreferrer' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                   className="font-editorial text-2xl text-[#17161a] dark:text-[#f4f3ef] hover:text-[#7358a8] dark:hover:text-[#a58be0] transition-colors"
                 >

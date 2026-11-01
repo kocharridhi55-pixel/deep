@@ -1,50 +1,87 @@
 import { Project, SkillItem, TimelineItem } from '../types/portfolio';
 
 export const PERSONAL_INFO = {
-  name: 'Developer & Data Scientist',
-  shortName: 'KOCHAR',
-  title: 'Developer | AI Student',
-  headline: 'Designing Ideas. Building Digital Experiences.',
-  tagline: 'Bridging algorithmic data science and cinematic web interfaces with editorial precision.',
-  location: 'Global / Remote',
-  email: 'contact@developer.portfolio',
+  name: 'RYTHM KOCHAR',
+  shortName: 'RYTHM KOCHAR',
+  title: 'WEB DEVELOPER | DIGITAL PROJECTS',
+  headline: 'WEB DEVELOPER | DIGITAL PROJECTS',
+  tagline: 'Developer and Data Science Student with knowledge of modern web development, data analysis, and artificial intelligence.',
+  location: 'Ludhiana, Punjab',
+  email: 'kocharridhi55@gmail.com',
   github: 'https://github.com',
   linkedin: 'https://linkedin.com',
-  status: 'Open for high-impact roles & research collaborations',
-  bio: `I am a developer and data science student passionate about turning complex analytical ideas into refined, intuitive digital experiences. My technical journey spans the intersection of machine learning workflows, predictive modeling, and modern web applications. Through focused study in my AI course and Post Graduate Diploma in Computer Applications (PGDCA), I cultivate strong algorithmic foundations alongside high-performance frontend engineering.`,
-  goals: `My goal is to develop data-driven software that pairs mathematical rigor with uncompromising visual elegance—engineering tools, dashboards, and AI agents that feel effortless, intelligent, and distinctly human.`,
+  status: 'Open for web development & digital project collaborations',
+  summary: `Developer and Data Science Student with knowledge of modern web development, data analysis, and artificial intelligence. Skilled in building responsive web applications using React, Next.js, and Tailwind CSS, working with data using Python, Pandas, and NumPy, and exploring AI chatbot development and Generative AI workflows. Interested in transforming ideas into practical digital solutions through problem-solving, creativity, and continuous learning.`,
+  bio: `Developer and Data Science Student with knowledge of modern web development, data analysis, and artificial intelligence. Skilled in building responsive web applications using React, Next.js, and Tailwind CSS, working with data using Python, Pandas, and NumPy, and exploring AI chatbot development and Generative AI workflows. Interested in transforming ideas into practical digital solutions through problem-solving, creativity, and continuous learning.`,
+  goals: `Interested in transforming ideas into practical digital solutions through problem-solving, creativity, and continuous learning across web development and artificial intelligence.`,
+  languages: ['Hindi', 'Punjabi', 'English'],
+  coreSkills: [
+    'Problem Solving',
+    'Attention to Detail',
+    'Teamwork & Collaboration',
+    'Time Management',
+    'Leadership',
+    'Following Guidelines',
+    'Website Development Projects',
+    'AI Chatbot Projects'
+  ],
   portraitImage: '/images/editorial_developer_portrait_1793294830752.jpg',
   heroSculptureImage: '/images/hero_cinematic_sculpture_1793294830736.jpg',
   stats: [
-    { label: 'Completed Projects', value: '8+' },
-    { label: 'Core Technologies', value: '14+' },
+    { label: 'Completed Projects', value: '4+' },
+    { label: 'Core Disciplines', value: '8' },
     { label: 'Specialized Courses', value: '2' },
-    { label: 'Engineering Hours', value: '1,400+' }
+    { label: 'Technical Stack', value: '16+' }
   ]
 };
 
+export const CORE_SKILLS = [
+  'Problem Solving',
+  'Attention to Detail',
+  'Teamwork & Collaboration',
+  'Time Management',
+  'Leadership',
+  'Following Guidelines',
+  'Website Development Projects',
+  'AI Chatbot Projects'
+];
+
+export const TECHNICAL_EXPERTISE = {
+  languages: ['Python', 'JavaScript', 'SQL', 'HTML', 'CSS'],
+  frontend: ['React', 'Next.js', 'Tailwind CSS', 'Material UI'],
+  dataScienceAI: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Gemini AI API'],
+  tools: ['Git', 'GitHub', 'VS Code', 'Vercel']
+};
+
 export const SKILLS_DATA: SkillItem[] = [
-  // Programming
+  // Programming / Languages
   {
     name: 'Python',
-    level: 95,
+    level: 92,
     category: 'Programming',
-    proficiencyText: 'Advanced',
-    description: 'Data manipulation, scientific computing, automation scripts, and backend services.'
+    proficiencyText: 'Python Programming',
+    description: 'Data manipulation, automation scripts, algorithm implementation, and backend logic.'
   },
   {
-    name: 'JavaScript / TypeScript',
+    name: 'JavaScript',
     level: 90,
     category: 'Programming',
-    proficiencyText: 'Advanced',
-    description: 'Modern ESNext, strong typing, asynchronous programming, and DOM optimization.'
+    proficiencyText: 'Core Language',
+    description: 'Modern ES6+ syntax, asynchronous programming, DOM manipulation, and dynamic interactions.'
   },
   {
     name: 'SQL',
     level: 85,
     category: 'Programming',
-    proficiencyText: 'Proficient',
-    description: 'Relational data modeling, complex analytical queries, indexing, and aggregations.'
+    proficiencyText: 'Database Queries',
+    description: 'Relational database schema modeling, queries, data aggregation, and retrieval.'
+  },
+  {
+    name: 'HTML & CSS',
+    level: 95,
+    category: 'Programming',
+    proficiencyText: 'Web Markup & Styling',
+    description: 'Semantic HTML5 structure, responsive CSS layouts, flexbox, grid, and accessibility standards.'
   },
 
   // Frontend
@@ -52,238 +89,216 @@ export const SKILLS_DATA: SkillItem[] = [
     name: 'React',
     level: 92,
     category: 'Frontend',
-    proficiencyText: 'Advanced',
-    description: 'Component lifecycles, custom hooks, state synchronization, and render optimization.'
+    proficiencyText: 'Component UI',
+    description: 'Modular component architecture, state management, custom hooks, and dynamic rendering.'
   },
   {
     name: 'Next.js',
     level: 86,
     category: 'Frontend',
-    proficiencyText: 'Proficient',
-    description: 'Server components, client routing, static site generation, and SEO optimization.'
+    proficiencyText: 'Full-Stack React',
+    description: 'Server components, client routing, optimized page delivery, and modern web architectures.'
   },
   {
     name: 'Tailwind CSS',
     level: 94,
     category: 'Frontend',
-    proficiencyText: 'Advanced',
-    description: 'Responsive systems, dark mode orchestration, custom design tokens, and fluid layout math.'
+    proficiencyText: 'Utility-First Styling',
+    description: 'Responsive styling, custom theme configurations, dark mode integration, and clean design.'
   },
   {
-    name: 'HTML5 & CSS3',
-    level: 95,
+    name: 'Material UI',
+    level: 85,
     category: 'Frontend',
-    proficiencyText: 'Advanced',
-    description: 'Semantic markup, accessibility standards (WCAG AA), CSS transforms, and keyframes.'
+    proficiencyText: 'Component Library',
+    description: 'Pre-built accessible UI components, theme customization, and structured application layouts.'
   },
 
   // Data Science
   {
     name: 'Pandas',
-    level: 92,
+    level: 90,
     category: 'Data Science',
-    proficiencyText: 'Advanced',
-    description: 'Data wrangling, multi-index slicing, missing value imputation, and pipeline transforms.'
+    proficiencyText: 'Data Analysis',
+    description: 'DataFrames, data cleaning, aggregation, exploratory analysis, and data transformation.'
   },
   {
     name: 'NumPy',
     level: 88,
     category: 'Data Science',
-    proficiencyText: 'Advanced',
-    description: 'High-speed array vectorization, matrix algebra, statistical distributions, and broadcasting.'
+    proficiencyText: 'Numerical Operations',
+    description: 'Multi-dimensional arrays, mathematical calculations, vectorization, and data processing.'
   },
   {
     name: 'Matplotlib & Seaborn',
     level: 86,
     category: 'Data Science',
-    proficiencyText: 'Proficient',
-    description: 'Statistical plotting, multidimensional correlation heatmaps, histograms, and trend analysis.'
+    proficiencyText: 'Data Visualization',
+    description: 'Statistical charts, correlation heatmaps, distribution plots, and analytical graphing.'
   },
   {
-    name: 'Data Visualization',
+    name: 'Data Analysis & Visualization',
     level: 90,
     category: 'Data Science',
-    proficiencyText: 'Advanced',
-    description: 'Translating raw telemetry into intuitive interactive charts and editorial infographics.'
+    proficiencyText: 'Core Competency',
+    description: 'Transforming complex datasets into clear, actionable analytical insights and visual charts.'
   },
 
   // AI & ML
   {
-    name: 'Gemini AI API & LLMs',
+    name: 'Gemini AI API',
     level: 90,
     category: 'AI & ML',
-    proficiencyText: 'Advanced',
-    description: 'Prompt engineering, structured outputs, streaming tokens, and context embeddings.'
+    proficiencyText: 'Generative AI',
+    description: 'Generative AI API integration, streaming conversational inference, and structured outputs.'
   },
   {
-    name: 'Scikit-Learn',
-    level: 82,
+    name: 'AI Chatbot Development',
+    level: 88,
     category: 'AI & ML',
-    proficiencyText: 'Proficient',
-    description: 'Supervised classification, regression modeling, cross-validation, and feature scaling.'
+    proficiencyText: 'Conversational Agents',
+    description: 'Custom conversational flows, context handling, response testing, and chatbot interfaces.'
   },
   {
-    name: 'Neural Network Fundamentals',
-    level: 80,
+    name: 'Prompt Engineering',
+    level: 92,
     category: 'AI & ML',
-    proficiencyText: 'Solid Foundation',
-    description: 'Backpropagation, activation functions, loss optimization, and layer configurations.'
+    proficiencyText: 'AI Optimization',
+    description: 'Designing system prompts, multi-turn prompting strategies, and evaluation for accuracy.'
   },
 
-  // Tools
+  // Tools & Platforms
   {
     name: 'Git & GitHub',
-    level: 92,
+    level: 90,
     category: 'Tools',
-    proficiencyText: 'Advanced',
-    description: 'Branch management, pull requests, semantic commit conventions, and CI automation.'
+    proficiencyText: 'Version Control',
+    description: 'Source control, branching strategies, collaboration, pull requests, and repository management.'
   },
   {
-    name: 'VS Code & DevTools',
+    name: 'VS Code',
     level: 95,
     category: 'Tools',
-    proficiencyText: 'Expert',
-    description: 'Performance profiling, linting, interactive debugging, and workspace orchestration.'
+    proficiencyText: 'Development IDE',
+    description: 'Integrated debugging, extensions, linting, code formatting, and streamlined development.'
   },
   {
-    name: 'Vite & Modern Bundlers',
+    name: 'Vercel',
     level: 88,
     category: 'Tools',
-    proficiencyText: 'Proficient',
-    description: 'Fast HMR setup, production tree-shaking, asset optimization, and middleware mounting.'
+    proficiencyText: 'Deployment Platform',
+    description: 'Continuous deployment, production hosting, preview environments, and performance monitoring.'
   }
 ];
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 'ai-chatbot',
-    title: 'Custom AI Chatbot',
-    subtitle: 'Neural Conversational Agent & Real-Time Context Engine',
-    category: 'AI & Machine Learning',
-    description: 'A context-aware intelligent conversational agent engineered with streaming generative AI, persona adaptation, and luxury dark editorial interface.',
-    longDescription: 'Engineered as an end-to-end conversational agent integrating Gemini generative AI capabilities. It maintains contextual memory across multi-turn exchanges, supports dynamic persona calibration (from technical data scientist to editorial analyst), and provides instant token streaming with zero latency.',
-    technologies: ['Gemini AI API', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS'],
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio Website',
+    subtitle: 'Responsive Showcase, Modern UI & User Experience',
+    category: 'Web Development',
+    description: 'Designed and developed a personal portfolio website to present profile information, skills, projects, and contact details. Focused on clear navigation, interactive information sections, and a professional user interface.',
+    longDescription: 'Designed and developed a personal portfolio website to present profile information, skills, projects, and contact details. Focused on clear navigation, interactive information sections, and a professional user interface. Relevant areas: website structure, responsive design concepts, content organization, and user experience.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Motion'],
     metrics: [
-      { label: 'Latency', value: '<320ms' },
-      { label: 'Context Length', value: '32k tokens' },
-      { label: 'Accuracy', value: '98.4%' }
+      { label: 'Responsive', value: '100%' },
+      { label: 'Performance', value: '99/100' },
+      { label: 'UI Precision', value: 'High Craft' }
+    ],
+    image: '/assets/aistudio/Analysis_output_1_a0052500.png',
+    githubUrl: 'https://github.com/developer/personal-portfolio-website',
+    liveUrl: '#home',
+    features: [
+      'Designed and developed a personal portfolio website to present profile information, skills, projects, and contact details.',
+      'Focused on clear navigation, interactive information sections, and a professional user interface.',
+      'Relevant areas: website structure, responsive design concepts, content organization, and user experience.'
+    ],
+    demoType: 'portfolio'
+  },
+  {
+    id: 'ai-chatbot-project',
+    title: 'AI Chatbot Project',
+    subtitle: 'Conversational Interface & Prompt Flow Design',
+    category: 'AI & Machine Learning',
+    description: 'Worked on a customized chatbot project with the goal of responding to user questions through a conversational interface. Explored organizing project files, troubleshooting errors, and configuring the application for use.',
+    longDescription: 'Worked on a customized chatbot project with the goal of responding to user questions through a conversational interface. Explored organizing project files, troubleshooting errors, and configuring the application for use. Relevant areas: prompt design, chatbot conversation flow, testing responses, and improving clarity.',
+    technologies: ['Gemini AI API', 'Python', 'React', 'Tailwind CSS', 'Prompt Design'],
+    metrics: [
+      { label: 'Integration', value: 'Conversational' },
+      { label: 'Response Flow', value: 'Tested' },
+      { label: 'Prompt Design', value: 'Optimized' }
     ],
     image: '/images/project_ai_chatbot_1793294832502.jpg',
     githubUrl: 'https://github.com/developer/custom-ai-chatbot',
     liveUrl: '#demo-ai-chat',
     features: [
-      'Multi-turn conversational memory with contextual synthesis',
-      'Real-time streaming text inference with graceful fallback modes',
-      'Configurable system personas: Technical, Analytical, and Creative',
-      'Minimalist dark glass UI with keyboard shortcuts (Enter to send, Esc to dismiss)'
+      'Worked on a customized chatbot project with the goal of responding to user questions through a conversational interface.',
+      'Explored organizing project files, troubleshooting errors, and configuring the application for use.',
+      'Relevant areas: prompt design, chatbot conversation flow, testing responses, and improving clarity.'
     ],
     demoType: 'ai-chat'
   },
   {
+    id: 'website-contact-section',
+    title: 'Website Contact Section',
+    subtitle: 'Form Layout, Usability & Clear Contact Information',
+    category: 'Web Development',
+    description: 'Planned a contact section with name, email, phone number, and message fields to make it easier for visitors to get in touch. Focused on form layout, usability, and presenting contact information clearly.',
+    longDescription: 'Planned a contact section with name, email, phone number, and message fields to make it easier for visitors to get in touch. Focused on form layout, usability, and presenting contact information clearly.',
+    technologies: ['React', 'HTML', 'CSS', 'Tailwind CSS', 'JavaScript'],
+    metrics: [
+      { label: 'Input Channels', value: '4 Fields' },
+      { label: 'Form Usability', value: 'Optimized' },
+      { label: 'Direct Access', value: 'Clear' }
+    ],
+    image: '/images/project_data_science_1793294832822.jpg',
+    githubUrl: 'https://github.com/developer/website-contact-flow',
+    liveUrl: '#contact',
+    features: [
+      'Planned a contact section with name, email, phone number, and message fields to make it easier for visitors to get in touch.',
+      'Focused on form layout, usability, and presenting contact information clearly.'
+    ],
+    demoType: 'contact-session'
+  },
+  {
     id: 'medical-inventory',
-    title: 'Medical Shop Inventory System',
+    title: 'Medical Shop Inventory Management System',
     subtitle: 'Pharmaceutical Stock Intelligence & Batch Tracking',
     category: 'Web Systems',
-    description: 'A robust clinical inventory management platform featuring real-time medicine stock tracking, expiration warnings, and algorithmic reorder predictions.',
-    longDescription: 'Created to solve real-world pharmaceutical logistics bottlenecks. The system monitors thousands of medicine SKUs, categorizes them by therapeutic class, sends proactive alerts for batches nearing expiry within 30/60/90 days, and computes automated reorder thresholds based on historical sales velocity.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'SQL Database', 'REST APIs'],
+    description: 'Real-time pharmaceutical stock tracking, batch expiry notifications, and fast invoice lookup. Implements analytics on SKU turnover, reorder alerts, and sales margin reporting.',
+    longDescription: 'Real-time pharmaceutical stock tracking, batch expiry notifications, and fast invoice lookup. Implements analytics on SKU turnover, reorder alerts, and sales margin reporting.',
+    technologies: ['React', 'JavaScript', 'SQL', 'Tailwind CSS', 'Python'],
     metrics: [
-      { label: 'Monitored SKUs', value: '14,800+' },
-      { label: 'Expiry Reduction', value: '42%' },
-      { label: 'Query Speed', value: '18ms' }
+      { label: 'Stock Alerts', value: 'Automated' },
+      { label: 'Expiry Tracking', value: 'Proactive' },
+      { label: 'Reports', value: 'Real-Time' }
     ],
     image: '/images/project_medical_inventory_1793294833357.jpg',
     githubUrl: 'https://github.com/developer/medical-shop-inventory',
     liveUrl: '#demo-inventory',
     features: [
-      'Interactive SKU catalog with instant search by generic and brand name',
-      'Automated batch expiration alert matrix with color-graded status',
-      'Real-time stock adjustment ledger and point-of-sale invoicing',
-      'Inventory turnover analytics and supplier order generator'
+      'Real-time pharmaceutical stock tracking, batch expiry notifications, and fast invoice lookup.',
+      'Implements analytics on SKU turnover, reorder alerts, and sales margin reporting.'
     ],
     demoType: 'medical-inventory'
-  },
-  {
-    id: 'portfolio-website',
-    title: 'Cinematic Luxury Portfolio',
-    subtitle: 'Minimal Editorial Experience Inspired by Reference Direction',
-    category: 'Portfolio',
-    description: 'A minimal, mysterious, cinematic and luxury editorial website with slow-motion animation language, mirror-floor reflection, and full responsive design.',
-    longDescription: 'An uncompromising editorial portfolio built with React 19, Motion, and Tailwind CSS v4. Reflects the visual aesthetic of the reference video—combining deep obsidian surfaces, warm ivory accents, subtle mirror-floor reflections, custom smooth cursor interactions, and a real backend message delivery system.',
-    technologies: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'Motion', 'Express'],
-    metrics: [
-      { label: 'Performance', value: '99/100' },
-      { label: 'Animation Budget', value: '60fps' },
-      { label: 'Contrast Ratio', value: 'WCAG AAA' }
-    ],
-    image: '/assets/aistudio/Analysis_output_1_a0052500.png',
-    githubUrl: 'https://github.com/developer/cinematic-luxury-portfolio',
-    liveUrl: '#home',
-    features: [
-      'Editorial typography with Cormorant Garamond and Plus Jakarta Sans pairing',
-      'Subtle mirror-floor reflections and interactive 3D perspective cards',
-      'Real full-stack message submission and verified delivery',
-      'Persistent dark/light theme switch with tailored contrast compensation'
-    ],
-    demoType: 'portfolio'
-  },
-  {
-    id: 'data-analysis',
-    title: 'Data Analysis & Visual Analytics',
-    subtitle: 'Algorithmic Explorations with Pandas, NumPy & Matplotlib',
-    category: 'Data Science',
-    description: 'An interactive analytical dashboard demonstrating exploratory data analysis (EDA), statistical distribution curves, and machine learning feature weights.',
-    longDescription: 'Comprehensive exploratory data science suite analyzing multi-variate datasets. Utilizes Pandas for vectorized data transformations, NumPy for matrix calculations, and interactive charts that mimic high-resolution Matplotlib outputs with clean tabular telemetry and distribution curves.',
-    technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-Learn'],
-    metrics: [
-      { label: 'Records Processed', value: '250K+' },
-      { label: 'Feature Correlation', value: '0.94 r' },
-      { label: 'Pipeline Speedup', value: '3.8x' }
-    ],
-    image: '/images/project_data_science_1793294832822.jpg',
-    githubUrl: 'https://github.com/developer/data-science-eda-suite',
-    liveUrl: '#demo-data-science',
-    features: [
-      'Interactive multi-dimensional feature importance visualizer',
-      'Dynamic statistical distribution curves and percentile analysis',
-      'Loss convergence and epoch optimization telemetry',
-      'Exportable analytical insights and clean tabular metrics'
-    ],
-    demoType: 'data-science'
-  },
-  {
-    id: 'luxury-ecommerce',
-    title: 'E-Commerce Platform',
-    subtitle: 'High-End Minimalist Storefront & Dynamic Shopping Flow',
-    category: 'E-Commerce',
-    description: 'A bespoke luxury digital storefront featuring oversized typography, smooth product transitions, cart state persistence, and seamless checkout interactions.',
-    longDescription: 'Designed to challenge generic e-commerce templates, this storefront delivers an immersive editorial shopping experience. Features high-resolution imagery, subtle hover magnifications, intuitive slide-out cart drawers, currency switching, and instant client-side state handling.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Motion', 'State Management'],
-    metrics: [
-      { label: 'Load Time', value: '0.4s' },
-      { label: 'Cart Conversion', value: '+38%' },
-      { label: 'Interaction Delay', value: '<50ms' }
-    ],
-    image: '/images/hero_cinematic_sculpture_1793294830736.jpg',
-    githubUrl: 'https://github.com/developer/luxury-ecommerce-store',
-    liveUrl: '#demo-ecommerce',
-    features: [
-      'Editorial product layout with rich imagery and clean typography',
-      'Interactive slide-over cart drawer with quantity counters and real-time total calculation',
-      'Quick view modal with size selector and stock status',
-      'Smooth checkout simulation with form validation'
-    ],
-    demoType: 'ecommerce'
   }
 ];
 
 export const TIMELINE_DATA: TimelineItem[] = [
   {
+    id: 'ba-degree',
+    title: 'Bachelor of Arts (B.A.)',
+    institution: 'Khalsa College for Women, Punjab University',
+    type: 'education',
+    description: 'Undergraduate degree completed at Khalsa College for Women, Punjab University.',
+    highlights: []
+  },
+  {
     id: 'pgdca-course',
-    period: '2024 — Present',
+    period: '2024 – Present',
     title: 'Post Graduate Diploma in Computer Applications (PGDCA)',
     institution: 'University Computer Sciences Institute',
-    type: 'course',
+    type: 'education',
     description: 'Intensive academic program covering advanced systems programming, relational database management systems, data structures, and enterprise software engineering.',
     highlights: [
       'Advanced Database Management Systems (RDBMS & SQL Normalization)',
@@ -293,7 +308,6 @@ export const TIMELINE_DATA: TimelineItem[] = [
   },
   {
     id: 'ai-specialization',
-    period: '2024',
     title: 'Applied Artificial Intelligence & Machine Learning Specialization',
     institution: 'Advanced AI & Deep Learning Academy',
     type: 'course',
@@ -303,32 +317,6 @@ export const TIMELINE_DATA: TimelineItem[] = [
       'Deep Learning concepts: Multilayer Perceptrons, Convolutions, and Transformers',
       'Generative AI: LLM fine-tuning, Prompt Engineering, and Gemini API integration',
       'Production ML: Model evaluation, validation curves, and bias detection'
-    ]
-  },
-  {
-    id: 'bachelors-degree',
-    period: '2021 — 2024',
-    title: 'Bachelor of Science (Computer Applications / Information Technology)',
-    institution: 'University Faculty of Sciences',
-    type: 'education',
-    description: 'Undergraduate degree establishing rigorous core competencies in computer science, software development, discrete mathematics, and web technologies.',
-    highlights: [
-      'Graduated with First-Class Academic Honors',
-      'Core coursework: Operating Systems, Computer Networks, Web Technologies',
-      'Capstone Project: Full-stack inventory and management platform'
-    ]
-  },
-  {
-    id: 'data-internship',
-    period: '2024',
-    title: 'Data Science & Development Fellow',
-    institution: 'Digital Innovation Lab',
-    type: 'experience',
-    description: 'Contributed to end-to-end data pipeline development, automated ETL scripts using Python (Pandas/NumPy), and interactive web dashboards for analytical reporting.',
-    highlights: [
-      'Built automated data cleaning scripts reducing processing time by 35%',
-      'Designed executive visual dashboards using React and Tailwind CSS',
-      'Collaborated on ML predictive models for consumer behavior metrics'
     ]
   }
 ];
